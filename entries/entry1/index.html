@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Starting point</title>
+    <style>
+      
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <img src="../../imgs/letter.png" alt="First Image" class="image1">
+        <img src="../../imgs/openletter.png" alt="Second Image" class="image2" id="secondImage">
+        <div class="text" id="textContent">Let's be friends?</div>
+        <div class="buttons" id="buttonContainer">
+            <button id="yesButton">Yes</button>
+            <button id="noButton">No</button>
+    </div>
+
+    <script>
+        const secondImage = document.getElementById('secondImage');
+        const textContent = document.getElementById('textContent');
+        const buttonContainer = document.getElementById('buttonContainer');
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+
+        secondImage.addEventListener('click', function() {
+            secondImage.style.display = 'none'; // Hide the second image
+            textContent.style.display = 'block'; // Show the text
+            setTimeout(() => {
+                buttonContainer.classList.add('active'); // Show the buttons after text appears with a slight delay
+            }, 500); // 500ms delay for smooth effect
+        });
+
+        // Redirect to different links when buttons are clicked
+        yesButton.addEventListener('click', function() {
+            window.location.href = 'file:///Users/jinnykim/Documents/kim_c1if24/entries/entry2/index2.html'; // Redirect to "Yes" link
+        });
+
+        noButton.addEventListener('click', function() {
+            window.location.href = ' '; // Redirect to "No" link
+        });
+    </script>
+
+</body>
+</html>
+

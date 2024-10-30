@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fcdabe;
+    font-family: palatino;
+    margin: 0;
+}
+
+
+.container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    text-align: center;
+}
+
+.image1, .image2 {
+    position: center;
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.image2 {
+    opacity: 0; /* Hide the second image by default */
+}
+
+.container:hover .image1 {
+    opacity: 0; /* Hide the first image on hover */
+}
+
+.container:hover .image2 {
+    opacity: 1; /* Show the second image on hover */
+}
+
+.text {
+    display: none;
+    font-size: 24px;
+    color: #333;
+    padding-top: 100px;
+}
+.buttons {
+    display: none;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.buttons.active {
+    display: block;
+    opacity: 1; /* Fade in buttons */
+}
+
+.buttons button {
+    font-size: 18px;
+    padding: 12px 25px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px; /* Make the buttons rounded */
+    background-color: #ebac71;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a shadow for a more modern look */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #ebac71;
+    transform: translateY(-3px); /* Slightly lift the button on hover */
+}
+
+.buttons button:active {
+    transform: translateY(0px); /* Return the button back to normal on click */
+}

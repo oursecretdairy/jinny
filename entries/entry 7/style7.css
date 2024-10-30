@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fec9db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 10px; /* Added padding for small screens */
+    position: relative; /* Position relative for the overlay */
+    transition: background-color 0.5s; /* Smooth transition for background */
+}
+
+/* Y2K Message Bubble */
+.message-bubble {
+    background-color: #f2f3f4;
+    border-radius: 20px;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ce88a1;
+    color: #333;
+}
+
+/* Input and Button */
+.input-area {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-area input {
+    padding: 10px;
+    border: 2px solid #ce88a1;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.input-area button {
+    padding: 10px 20px;
+    background-color: #ce88a1;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.input-area button:hover {
+    background-color: #f192b2;
+}
+
+   /* Error Popup - Computer Error Style */
+   .error-popup {
+    position: fixed;
+    background-color: #000; /* Dark background */
+    border: 2px solid #69b7ff; /* Error border */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #69b7ff; /* Error text color */
+    z-index: 100;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for retro feel */
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5); /* Glow effect */
+}
+.error-popup button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #69b7ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.error-popup button:hover {
+    background-color: #1466ff;
+}
+
+/* Black Screen Overlay */
+.black-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 200;
+    display: none; /* Hidden by default */
+}
+
+.reload-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #010101;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    display: none; /* Hidden by default */
+}
+
+.reload-button:hover {
+    background-color: #fff;
+}
+
+/* Media Queries for Phones */
+@media (max-width: 480px) {
+    .message-bubble {
+        max-width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .input-area input {
+        width: 90%; /* Responsive input width */
+        font-size: 14px;
+        padding: 8px;
+    }
+    .input-area button {
+        width: 90%; /* Responsive button width */
+        font-size: 14px;
+        padding: 8px;
+    }
+    .error-popup {
+        width: 90%; /* Responsive error popup width */
+        font-size: 14px;
+        padding: 15px;
+    }
+}

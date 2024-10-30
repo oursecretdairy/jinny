@@ -1,0 +1,112 @@
+
+body {
+   font-family: 'Press Start 2P', sans-serif;
+   background-color: #f2f2f2;
+   color: #333;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: linear-gradient(135deg, #c0b289 0%, #c0b580 100%);
+}
+
+/* User posts */
+.post {
+   background-color: #fff;
+   margin-bottom: 20px;
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border: 2px solid #333;
+   border-radius: 10px;
+   transition: transform 0.3s;
+}
+
+.image-container {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   position: relative;
+}
+
+.image-container img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: opacity 0.5s ease;
+}
+
+.image-container img.second {
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+}
+
+.image-container:hover img.second {
+   opacity: 1;
+}
+
+.image-container:hover img.first {
+   opacity: 0;
+}
+
+.caption {
+   text-align: center;
+   margin-top: 10px;
+}
+/* Y2K-style buttons */
+.button {
+   padding: 10px 20px;
+   background-color: #333;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   text-transform: uppercase;
+   font-size: 12px;
+   cursor: pointer;
+   transition: 0.3s;
+   box-shadow: 0 4px 0 #555;
+}
+
+.button:hover {
+   background-color: #be96cc;
+   box-shadow: 0 4px 0 #333;
+}
+.like-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   font-size: 24px;
+   color: #8e8e8e;
+   transition: color 0.3s ease;
+   text-decoration: none; /* Remove underline from anchor */
+}
+
+.liked {
+   color: #ed4956;
+}
+
+.like-button i {
+   margin-right: 8px;
+}
+
+    /* Media Query for smaller screens */
+    @media (max-width: 600px) {
+      .image-container {
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .like-button {
+          font-size: 12px;
+      }
+    }
+
+
+
+
+
+

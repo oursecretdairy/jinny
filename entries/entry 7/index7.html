@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pink Feelings go Black</title>
+<link rel="stylesheet" href="style7.css">
+
+</head>
+<body>
+
+<!-- Message Bubble -->
+<div class="message-bubble">
+    Did you had to lie all this time?
+</div>
+
+<!-- Input and Send Button -->
+<div class="input-area">
+    <input type="text" placeholder="Type your message here...">
+    <button onclick="showError()">Send</button>
+</div>
+
+<!-- Error Popup (Hidden Initially) -->
+<div id="errorPopup" class="error-popup" style="display: none;">
+    <p>Oops! Something went wrong.</p>
+    <button onclick="repeatError()">OK</button>
+</div>
+
+<!-- Black Screen Overlay -->
+<div id="blackScreen" class="black-screen">
+    <p>Too Many Errors! System Overload!</p>
+    <button id="reloadButton" class="reload-button" onclick="reloadPage()">Reload</button>
+</div>
+
+<script>
+    let errorCount = 0; // Counter for errors
+
+    function getRandomPosition() {
+        const x = Math.floor(Math.random() * (window.innerWidth - 200));
+        const y = Math.floor(Math.random() * (window.innerHeight - 100));
+        return { x, y };
+    }
+
+    function getRandomSize() {
+        const width = 180 + Math.floor(Math.random() * 120);
+        return width;
+    }
+
+    function showError() {
+        const errorPopup = document.getElementById('errorPopup');
+        const { x, y } = getRandomPosition();
+        const width = getRandomSize();
+        errorPopup.style.display = 'block';
+        errorPopup.style.left = `${x}px`;
+        errorPopup.style.top = `${y}px`;
+        errorPopup.style.width = `${width}px`;
+    }
+
+    function repeatError() {
+        errorCount++; // Increment the error count
+        showError(); // Show the error again
+        
+        // Check if the error count exceeds 8
+        if (errorCount >= 8) {
+            // Show the black screen overlay
+            document.getElementById('blackScreen').style.display = 'flex';
+            // Hide the error popup
+            document.getElementById('errorPopup').style.display = 'none';
+            // Change the body background color to black
+            document.body.style.backgroundColor = 'black';
+            // Show the reload button
+            document.getElementById('reloadButton').style.display = 'block';
+        }
+    }
+
+    function reloadPage() {
+        // Redirect to a new link (change the URL as needed)
+        window.location.href = "file:///Users/jinnykim/Documents/kim_c1if24/entries/entry1/index.html"; // Replace with your desired URL
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+

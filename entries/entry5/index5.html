@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+   <!-- Font Awesome for Like Icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style5.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellow Lie</title>
+   </head>
+<body>
+
+    <div class="post">
+        <div class="image-container">
+            <img src="../../imgs/ditto1.jpg" alt="First Image" class="first">
+            <img src="../../imgs/ditto 2.jpg" alt="Second Image" class="second">
+        </div>
+        <div class="caption">
+            <p>How long do you think this can last..?</p>
+        </div>
+        <a href="file:///Users/jinnykim/Documents/kim_c1if24/entries/entry6/index6.html" class="like-button" id="likeBtn">
+         <i class="far fa-heart"></i>
+         <span id="likeText">Like</span>
+     </a>
+ </div>
+
+ <script>
+     const likeButton = document.getElementById('likeBtn');
+     const likeIcon = likeButton.querySelector('i');
+     const likeText = document.getElementById('likeText');
+
+     let liked = false;
+
+     likeButton.addEventListener('click', function(event) {
+         // Prevent default action to allow the transition first
+         event.preventDefault(); 
+         liked = !liked;
+         if (liked) {
+             likeIcon.classList.remove('far');
+             likeIcon.classList.add('fas');
+             likeButton.classList.add('liked');
+             likeText.textContent = 'Liked';
+
+             // Wait for a brief moment before navigating to the next page
+             setTimeout(() => {
+                 window.location.href = likeButton.getAttribute('href');
+             }, 500); // Adjust the time if needed
+         } else {
+             likeIcon.classList.remove('fas');
+             likeIcon.classList.add('far');
+             likeButton.classList.remove('liked');
+             likeText.textContent = 'Like';
+         }
+     });
+ </script>
+
+
+</body>
+</html>
+    </div>
+
+</body>
+</html>

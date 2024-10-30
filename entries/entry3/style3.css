@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(231, 229, 230);
+    color: #567480;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 300%;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #567480;
+}
+
+.message {
+    margin-bottom: 20px;
+    font-size: large;
+    
+}
+
+.prompt {
+    color: #567480;
+}
+
+.typing {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+a {
+    color: #567480;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #567480;
+}
+.message-input {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.message-input button {
+    padding: 10px;
+    border: none;
+    background-color: #4577a0;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.message-input button:hover {
+    background-color: #4577a0;
+}
