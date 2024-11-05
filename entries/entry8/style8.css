@@ -1,0 +1,81 @@
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f5;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+#center-image {
+    width: 300px;
+    transition: opacity 0.5s ease;
+}
+
+.text-bubble {
+    position: absolute;
+    padding: 10px 15px;
+    background: #007acc;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1em;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#bubble1 {
+    top: -50px;
+    left: -120px;
+    transform: translate(-20px, 20px);
+}
+
+#bubble2 {
+    bottom: -50px;
+    right: -120px;
+    transform: translate(20px, -20px);
+}
+
+#bubble3 {
+    top: -100px;
+    right: 0;
+    transform: translate(0, 20px);
+}
+
+#bubble4 {
+    bottom: -100px;
+    left: 0;
+    transform: translate(-20px, 0);
+}
+
+#bubble5 {
+    top: -150px;
+    left: 50%;
+    transform: translate(-50%, 20px);
+}
+
+#bubble6 {
+    bottom: -150px;
+    right: 50%;
+    transform: translate(50%, -20px);
+}
+
+.image-wrapper:hover #center-image {
+    opacity: 0;
+}
+
+.image-wrapper:hover .text-bubble {
+    opacity: 1;
+    transform: translate(0, 0);
+}
