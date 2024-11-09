@@ -1,18 +1,9 @@
-body, html {
+/* General container styles */
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f5;
-}
-
-.container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .image-wrapper {
@@ -21,61 +12,49 @@ body, html {
 
 #center-image {
     width: 300px;
-    transition: opacity 0.5s ease;
+    height: auto;
 }
 
 .text-bubble {
     position: absolute;
-    padding: 10px 15px;
-    background: #007acc;
-    color: #fff;
-    border-radius: 20px;
-    font-size: 1em;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-size: 18px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: none;
 }
 
-#bubble1 {
-    top: -50px;
-    left: -120px;
-    transform: translate(-20px, 20px);
-}
-
-#bubble2 {
-    bottom: -50px;
-    right: -120px;
-    transform: translate(20px, -20px);
-}
-
-#bubble3 {
-    top: -100px;
-    right: 0;
-    transform: translate(0, 20px);
-}
-
-#bubble4 {
-    bottom: -100px;
-    left: 0;
-    transform: translate(-20px, 0);
-}
-
-#bubble5 {
-    top: -150px;
-    left: 50%;
-    transform: translate(-50%, 20px);
-}
-
-#bubble6 {
-    bottom: -150px;
-    right: 50%;
-    transform: translate(50%, -20px);
-}
-
-.image-wrapper:hover #center-image {
-    opacity: 0;
-}
-
+/* Hover effect for showing text bubbles */
 .image-wrapper:hover .text-bubble {
-    opacity: 1;
-    transform: translate(0, 0);
+    display: block;
 }
+
+/* Position each bubble around the image */
+#bubble1 { top: -20px; left: 20px; }
+#bubble2 { top: 40px; right: 20px; }
+#bubble3 { bottom: 20px; left: 20px; }
+#bubble4 { bottom: 20px; right: 20px; }
+#bubble5 { top: 100px; left: -20px; }
+#bubble6 { top: 100px; right: -20px; }
+
+/* Media query for screens up to 390px wide (like iPhones) */
+@media only screen and (max-width: 390px) {
+    #center-image {
+        width: 90%; /* Adjust image to fit smaller screens */
+    }
+
+    .text-bubble {
+        font-size: 14px; /* Reduce font size for bubbles */
+        padding: 3px 8px; /* Adjust padding for smaller screens */
+    }
+
+    /* Adjust bubble positions for smaller screens */
+    #bubble1 { top: -10px; left: 10px; }
+    #bubble2 { top: 30px; right: 10px; }
+    #bubble3 { bottom: 10px; left: 10px; }
+    #bubble4 { bottom: 10px; right: 10px; }
+    #bubble5 { top: 80px; left: 0; }
+    #bubble6 { top: 80px; right: 0; }
+}
+
