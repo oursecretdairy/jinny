@@ -3,26 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Between reality and lie</title>
+    <title>Between truth and lie</title>
     <link rel="stylesheet" href="style8.css">
+
 </head>
 <body>
-    <div class="container">
-        <div class="image-wrapper">
-            <img src="daffodil.jpg" alt="Center Image" id="center-image">
-            <div class="text-bubble" id="bubble1">Why did you lie?</div>
-            <div class="text-bubble" id="bubble2">Why did you lie?</div>
-            <div class="text-bubble" id="bubble3">Why did you lie?</div>
-            <div class="text-bubble" id="bubble4">Why did you lie?</div>
-            <div class="text-bubble" id="bubble5">Why did you lie?</div>
-            <div class="text-bubble" id="bubble6">Why did you lie?</div>
+    <button id="startBtn">Start the Lotto!</button>
+    
+    <div id="lottoMachine">
+        <div class="screen">
+            <span id="resultText">Ready</span>
         </div>
-        <audio id="hover-sound" src="lie sound.wav"></audio>
+        <div class="lever"></div>
     </div>
 
-    <script src="script8.js"></script>
+    <button id="redirectBtn">Play Again</button> <!-- Redirect button -->
+
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const lottoMachine = document.getElementById('lottoMachine');
+        const resultText = document.getElementById('resultText');
+        const redirectBtn = document.getElementById('redirectBtn'); // Redirect button
+
+        // Lotto text options
+        const texts = ["truth?", "lie?", "truth?", "lie?", "truth?"];
+
+        startBtn.addEventListener('click', () => {
+            // Change background color to black
+            document.body.style.backgroundColor = "#000";
+            
+            // Hide the start button
+            startBtn.style.display = 'none';
+
+            // Show and animate the lotto machine
+            lottoMachine.style.display = 'block';
+            resultText.style.animation = 'spin 2s infinite';
+
+            // Start the "spin" and stop after 3 seconds
+            let count = 0;
+            const spinInterval = setInterval(() => {
+                const randomIndex = Math.floor(Math.random() * texts.length);
+                resultText.textContent = texts[randomIndex];
+                count++;
+            }, 200);
+
+            setTimeout(() => {
+                clearInterval(spinInterval);
+                resultText.style.animation = '';  // Remove the spinning animation
+                resultText.textContent = texts[Math.floor(Math.random() * texts.length)];  // Final result
+
+                // Show the redirect button after the machine stops
+                redirectBtn.style.display = 'block';
+            }, 3000);
+        });
+
+        // Redirect button click event
+        redirectBtn.addEventListener('click', () => {
+            window.location.href = "https://example.com"; // Replace with your desired URL
+        });
+    </script>
 </body>
 </html>
+
+
 
 
 

@@ -1,0 +1,131 @@
+/* Reset basic margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body setup */
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Background video setup */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Play/Pause button styling */
+.controls {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.play-pause-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff5c5c;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.play-pause-btn:hover {
+    background-color: #ff8c8c;
+    transform: scale(1.1);
+}
+
+.play-pause-btn:active {
+    transform: scale(0.95);
+}
+
+/* End image styling */
+.end-image {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Hover effect on the end image */
+.end-image:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ========================= */
+/* Media Queries for Responsiveness */
+/* ========================= */
+
+@media (max-width: 768px) {
+    .background-video {
+        width: 90%;
+        height: 90%;
+    }
+
+    .play-pause-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .controls {
+        bottom: 20px;
+    }
+
+    .end-image {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-video {
+        width: 80%;
+        height: 80%;
+    }
+
+    .play-pause-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        background-color: #ff99a9;
+    }
+
+    .controls {
+        bottom: 15px;
+    }
+
+    .end-image {
+        width: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

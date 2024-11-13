@@ -1,60 +1,102 @@
-/* General container styles */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.image-wrapper {
-    position: relative;
-}
-
-#center-image {
-    width: 300px;
-    height: auto;
-}
-
-.text-bubble {
-    position: absolute;
-    font-size: 18px;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 5px 10px;
-    display: none;
-}
-
-/* Hover effect for showing text bubbles */
-.image-wrapper:hover .text-bubble {
-    display: block;
-}
-
-/* Position each bubble around the image */
-#bubble1 { top: -20px; left: 20px; }
-#bubble2 { top: 40px; right: 20px; }
-#bubble3 { bottom: 20px; left: 20px; }
-#bubble4 { bottom: 20px; right: 20px; }
-#bubble5 { top: 100px; left: -20px; }
-#bubble6 { top: 100px; right: -20px; }
-
-/* Media query for screens up to 390px wide (like iPhones) */
-@media only screen and (max-width: 390px) {
-    #center-image {
-        width: 90%; /* Adjust image to fit smaller screens */
+     /* Basic styling */
+     body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        transition: background-color 0.5s ease-in-out;
     }
 
-    .text-bubble {
-        font-size: 14px; /* Reduce font size for bubbles */
-        padding: 3px 8px; /* Adjust padding for smaller screens */
+    /* Button styling */
+    #startBtn, #redirectBtn {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
     }
 
-    /* Adjust bubble positions for smaller screens */
-    #bubble1 { top: -10px; left: 10px; }
-    #bubble2 { top: 30px; right: 10px; }
-    #bubble3 { bottom: 10px; left: 10px; }
-    #bubble4 { bottom: 10px; right: 10px; }
-    #bubble5 { top: 80px; left: 0; }
-    #bubble6 { top: 80px; right: 0; }
-}
+    #startBtn:hover, #redirectBtn:hover {
+        background-color: #45a049;
+    }
+
+    /* Redirect button styling (initially hidden) */
+    #redirectBtn {
+        display: none;
+        margin-top: 20px;
+    }
+
+    /* Lotto machine styling */
+    #lottoMachine {
+        display: none;
+        width: 300px;
+        height: 400px;
+        background: linear-gradient(145deg, #333, #555);
+        border-radius: 20px;
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    /* Screen styling inside the machine */
+    .screen {
+        background-color: #222;
+        border: 3px solid #777;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 2.5em;
+        color: #fff;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+    }
+
+    /* Lever styling */
+    .lever {
+        width: 15px;
+        height: 100px;
+        background-color: #777;
+        position: absolute;
+        right: -30px;
+        top: 30px;
+        border-radius: 10px;
+    }
+
+    .lever::after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-color: #e74c3c;
+        position: absolute;
+        bottom: -20px;
+        left: -8px;
+        border-radius: 50%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Animation for the lotto text */
+    @keyframes spin {
+        0% { transform: rotateX(0deg); }
+        100% { transform: rotateX(-360deg); }
+    }
+
+    /* Smooth fade-in for the lotto machine */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
 
