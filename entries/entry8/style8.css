@@ -1,102 +1,53 @@
-     /* Basic styling */
-     body, html {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-        transition: background-color 0.5s ease-in-out;
-    }
+  /* Basic styling */
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.5s ease-in-out;
+}
 
-    /* Button styling */
-    #startBtn, #redirectBtn {
-        padding: 15px 30px;
-        font-size: 1.2em;
-        cursor: pointer;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        transition: background-color 0.3s ease;
-    }
+/* Button styling */
+#startBtn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
 
-    #startBtn:hover, #redirectBtn:hover {
-        background-color: #45a049;
-    }
+#startBtn:hover {
+    background-color: #45a049;
+}
 
-    /* Redirect button styling (initially hidden) */
-    #redirectBtn {
-        display: none;
-        margin-top: 20px;
-    }
+/* Lotto machine container */
+#lottoMachine {
+    display: none;
+    font-size: 3em;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    animation: fadeIn 0.5s ease forwards;
+}
 
-    /* Lotto machine styling */
-    #lottoMachine {
-        display: none;
-        width: 300px;
-        height: 400px;
-        background: linear-gradient(145deg, #333, #555);
-        border-radius: 20px;
-        padding: 20px;
-        color: #fff;
-        text-align: center;
-        position: relative;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-        animation: fadeIn 0.5s ease forwards;
-    }
+/* Animation for the lotto text */
+@keyframes spin {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(-360deg); }
+}
 
-    /* Screen styling inside the machine */
-    .screen {
-        background-color: #222;
-        border: 3px solid #777;
-        border-radius: 10px;
-        padding: 20px;
-        font-size: 2.5em;
-        color: #fff;
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-        margin-bottom: 20px;
-    }
-
-    /* Lever styling */
-    .lever {
-        width: 15px;
-        height: 100px;
-        background-color: #777;
-        position: absolute;
-        right: -30px;
-        top: 30px;
-        border-radius: 10px;
-    }
-
-    .lever::after {
-        content: '';
-        width: 30px;
-        height: 30px;
-        background-color: #e74c3c;
-        position: absolute;
-        bottom: -20px;
-        left: -8px;
-        border-radius: 50%;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Animation for the lotto text */
-    @keyframes spin {
-        0% { transform: rotateX(0deg); }
-        100% { transform: rotateX(-360deg); }
-    }
-
-    /* Smooth fade-in for the lotto machine */
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
+/* Smooth fade-in for the lotto machine */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
