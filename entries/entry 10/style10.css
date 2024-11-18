@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.folder {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.folder img {
+  width: 100px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.folder:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  margin-top: 20px;
+  color: red;
+  font-size: 18px;
+  display: none;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  color: blue;
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: none;
+}
+
+.forgot-password:hover {
+  color: darkblue;
+}
+
+ /* Media query for smaller screens */
+ @media (max-width: 600px) {
+  body {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .folder img {
+    width: 100px; /* Smaller image for smaller screens */
+  }
+
+  .message {
+    font-size: 16px; /* Slightly smaller text */
+  }
+
+  .forgot-password {
+    font-size: 14px; /* Adjust font size */
+  }
+}
