@@ -10,6 +10,6 @@ function forgotPassword() {
   const securityAnswer = prompt("What is your biggest secrete you ever kept?");
   if (securityAnswer !== null) {
     // Redirect to a different page (you can replace the URL below with your desired page)
-    window.location.href = "https://www.example.com";
+    window.location.href = "https://oursecretdairy.github.io/jinny/entries/entry1/";
   }
 }
