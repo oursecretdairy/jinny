@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../entry1"
+		},
+		{
+			"path": "../entry8"
+		},
+		{
+			"path": "../entry 7"
+		},
+		{
+			"path": "../entry6"
+		}
+	],
+	"settings": {}
+}
