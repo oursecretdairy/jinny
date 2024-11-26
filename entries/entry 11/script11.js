@@ -23,7 +23,7 @@ function typeText() {
 }
 
 function goToNextPage() {
-  window.location.href = "https://oursecretdairy.github.io/jinny/entries/entry1/"; // Replace with your target URL
+  window.location.href = "https://oursecretdairy.github.io/jinny/entries/entry1/"; 
 }
 
 // Start typing animation on page load
