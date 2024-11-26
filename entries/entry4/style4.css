@@ -70,6 +70,50 @@ button {
 button:hover {
     background-color: #6c4674;
 }
+@media (max-width: 768px) {
+    .image {
+        width: 80%; /* Adjust image size for smaller screens */
+    }
+
+    h1 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+    }
+
+    .container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack the lyrics vertically */
+    }
+
+    .music-tape {
+        width: 90%; /* Adjust music tape image for small screens */
+    }
+
+    .message {
+        font-size: 28px; /* Smaller font size for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px; /* Further reduce font size for very small screens */
+    }
+
+    .image {
+        width: 70%; /* Make image smaller for very small screens */
+    }
+
+    .music-tape {
+        width: 80%; /* Adjust music tape size for very small screens */
+    }
+
+    .message {
+        font-size: 24px; /* Smaller font size for very small screens */
+    }
+}
 
 
     
