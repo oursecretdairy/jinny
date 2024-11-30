@@ -14,9 +14,10 @@ body {
     align-items: center;
     background: url('homepage.gif') no-repeat center center fixed;
     background-size: cover;
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
+    font-family: 'Orbitron', 'VT323', monospace;
+            color: rgb(124, 159, 242); /* Digital cyan */
+            text-shadow: 2px 2px 8px rgba(0, 255, 255, 0.8);
+            text-align: center;
 }
 
 /* Title styling */
