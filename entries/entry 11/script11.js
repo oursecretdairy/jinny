@@ -23,7 +23,7 @@ function typeText() {
 }
 
 function goToNextPage() {
-  window.location.href = "https://oursecretdairy.github.io/jinny/entries/entry1/"; 
+  window.location.href = "file:///Users/jinnykim/Documents/kim_c1if24/jinny/entries/homepage/index.html"; 
 }
 
 // Start typing animation on page load
