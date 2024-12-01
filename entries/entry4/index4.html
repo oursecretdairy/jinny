@@ -93,12 +93,16 @@
         }
     });
 
-    // Pause button functionality
-    pauseButton.addEventListener("click", function() {
-        if (!song.paused) {
-            song.pause();
-        }
-    });
+ // Toggle play/pause functionality for the pause button
+pauseButton.addEventListener("click", function() {
+    if (song.paused) {
+        song.play();
+        pauseButton.textContent = "Pause"; // Update button text to "Pause"
+    } else {
+        song.pause();
+        pauseButton.textContent = "Play"; // Update button text to "Play"
+    }
+});
 
     // Next button functionality
     nextButton.addEventListener("click", function() {
