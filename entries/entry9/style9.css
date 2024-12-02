@@ -1,73 +1,89 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #a8c3f9;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #87ceeb);
+    color: #fff;
 }
-
-/* Container for the Pinterest-style layout */
-.pinterest-board {
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+#puzzle-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 15px;
-    width: 100%;
-    max-width: 1400px;
-    padding: 20px;
-    box-sizing: border-box;
-    grid-auto-rows: 200px;
-}
-
-/* Basic styling for each image item */
-.pinterest-item {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
     position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    background-color: #ffffff;
-}
-
-/* Hover effect */
-.pinterest-item:hover {
-    transform: scale(1.05);
-}
-
-/* Image styling */
-.pinterest-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Styling for images with different sizes */
-.item-large {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.item-medium {
-    grid-column: span 2;
-    grid-row: span 1;
-}
-
-.item-small {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
-/* Optional text overlay styling */
-.overlay {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: rgba(255, 255, 255, 0.1);
     padding: 10px;
-    font-size: 0.9rem;
-    text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
 }
+#puzzle-container.completed {
+    box-shadow: 0 0 15px 5px rgba(30, 144, 255, 0.7);
+    cursor: pointer;
+}
+.piece {
+    width: 100px;
+    height: 100px;
+    cursor: grab;
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transition: transform 0.2s ease;
+}
+#question-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: #333;
+    z-index: 10;
+    width: 300px;
+    text-align: center;
+}
+#question-box p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+#question-box input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+#question-box button {
+    padding: 10px 20px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+#question-box button:hover {
+    background: #104e8b;
+}
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+

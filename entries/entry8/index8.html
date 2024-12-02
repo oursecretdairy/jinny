@@ -1,69 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Between truth and lie</title>
-    <link rel="stylesheet" href="style8.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Between Reality and Lie</title>
+  <link rel="stylesheet" href="style8.css">
 </head>
 <body>
-    <button id="startBtn">Betting your way out?</button>
-    
-    <div id="lottoMachine">
-        <div class="screen">
-            <span id="resultText">Ready</span>
-        </div>
-        <div class="lever"></div>
-    </div>
+  <div id="background"></div>
+  <canvas id="scratchCanvas"></canvas>
+  <button id="next-button" onclick="window.location.href='https://oursecretdairy.github.io/jinny/entries/entry9/index9%20(1).html';">Next Page</button>
 
-    <button id="redirectBtn">Play Again</button> <!-- Redirect button -->
-
-    <script>
-        const startBtn = document.getElementById('startBtn');
-        const lottoMachine = document.getElementById('lottoMachine');
-        const resultText = document.getElementById('resultText');
-        const redirectBtn = document.getElementById('redirectBtn'); // Redirect button
-
-        // Lotto text options
-        const texts = ["truth?", "lie?", "truth?", "lie?", "truth?"];
-
-        startBtn.addEventListener('click', () => {
-            // Change background color to black
-            document.body.style.backgroundColor = "#000";
-            
-            // Hide the start button
-            startBtn.style.display = 'none';
-
-            // Show and animate the lotto machine
-            lottoMachine.style.display = 'block';
-            resultText.style.animation = 'spin 2s infinite';
-
-            // Start the "spin" and stop after 3 seconds
-            let count = 0;
-            const spinInterval = setInterval(() => {
-                const randomIndex = Math.floor(Math.random() * texts.length);
-                resultText.textContent = texts[randomIndex];
-                count++;
-            }, 200);
-
-            setTimeout(() => {
-                clearInterval(spinInterval);
-                resultText.style.animation = '';  // Remove the spinning animation
-                resultText.textContent = texts[Math.floor(Math.random() * texts.length)];  // Final result
-
-                // Show the redirect button after the machine stops
-                redirectBtn.style.display = 'block';
-            }, 3000);
-        });
-
-        // Redirect button click event
-        redirectBtn.addEventListener('click', () => {
-            window.location.href = "https://oursecretdairy.github.io/jinny/entries/entry9/index9%20(1).html"; // Replace with your desired URL
-        });
-    </script>
+  <script src="script8.js"></script>
 </body>
 </html>
+
+
 
 
 

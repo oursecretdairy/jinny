@@ -5,132 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Confidence</title>
     <link rel="stylesheet" href="style9.css">
-    <style>
-         .flip-box {
-          background-color: transparent;
-          /*
-          width: 300px;
-          height: 200px;
-          */
-          border: 1px solid #f1f1f1;
-          /*perspective: 1000px;*/
-        }
-        
-        .flip-box-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          transition: transform 0.8s;
-          transform-style: preserve-3d;
-        }
-        
-        .flip-box:hover .flip-box-inner {
-          transform: rotateY(180deg);
-        }
-        
-        .flip-box-front, .flip-box-back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-        }
-        
-        .flip-box-front {
-          background-color: white;
-          color: black;
-        }
-        
-        .flip-box-back {
-          background-color: #555;
-          color: white;
-          border-radius: 10px;
-          transform: rotateY(180deg);
-        }
-        </style>
 </head>
 <body>
-
-    <!-- Pinterest-style board container -->
-    <div class="pinterest-board">
-        <div class="flip-box item-large">
-            <div class="flip-box-inner">
-                <div class="pinterest-item flip-box-front">
-                    <img src="blue rose.png" alt="Image 1">
-                    <div class="overlay">Blue Confidence</div>
-                </div>
-                <div class="flip-box-back">
-                    <p>one last confession</p>
-                    <h1>I want to say this even if it might be the last time</h1>
-                </div>
-            </div>
-        </div>
-        <div class="flip-box item-small">
-          <div class="flip-box-inner">
-              <div class="pinterest-item flip-box-front">
-                  <img src="blue rose.png" alt="Image 1">
-                  <div class="overlay">Blue Confidence</div>
-              </div>
-              <div class="flip-box-back">
-                  <p>one last confession</p>
-                  <h1>It was wrong for me to act like this, I never meant it</h1>
-              </div>
-          </div>
-      </div>
-      <div class="flip-box item-medium">
-        <div class="flip-box-inner">
-            <div class="pinterest-item flip-box-front">
-                <img src="blue rose.png" alt="Image 1">
-                <div class="overlay">Blue Confidence</div>
-            </div>
-            <div class="flip-box-back">
-                <p>one last confession</p>
-                <h1>I..I never meant any of what I said before</h1>
-            </div>
-        </div>
+    <h1>Blue Confidence</h1>
+    <div id="puzzle-container"></div>
+    <div id="question-box">
+        <p>What is your one last word of confession to your friend?</p>
+        <input type="text" id="answer" placeholder="Your answer here">
+        <button id="submit-answer">Submit</button>
     </div>
-    <div class="flip-box item-small">
-      <div class="flip-box-inner">
-          <div class="pinterest-item flip-box-front">
-              <img src="blue rose.png" alt="Image 1">
-              <div class="overlay">Blue Confidence</div>
-          </div>
-          <div class="flip-box-back">
-              <p>one last confession</p>
-              <h1>I don't know if this will be enough, and I'm not asking for forgiveness</h1>
-          </div>
-      </div>
-  </div>
-  <div class="flip-box item-small">
-    <div class="flip-box-inner">
-        <div class="pinterest-item flip-box-front">
-            <img src="blue rose.png" alt="Image 1">
-            <div class="overlay">Blue Confidence</div>
-        </div>
-        <div class="flip-box-back">
-            <p>one last confession</p>
-            <h1>I just wanna say this one last time</h1>
-        </div>
-    </div>
-</div>
-<div class="flip-box item-large">
-  <div class="flip-box-inner">
-      <div class="pinterest-item flip-box-front">
-          <img src="blue rose.png" alt="Image 1">
-          <div class="overlay">Blue Confidence</div>
-      </div>
-      <div class="flip-box-back">
-          <p>one last confession</p>
-          <h1>I'm sorry</h1>
-      </div>
-  </div>
-</div>
-        <!-- Add more images with class variations as needed -->
-    </div>
-
+   
+    <script src="script9.js"></script>
 </body>
 </html>
+
+
+
+
 
 
 

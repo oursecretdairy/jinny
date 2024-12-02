@@ -1,53 +1,55 @@
-  /* Basic styling */
-  body, html {
+body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     overflow: hidden;
-    transition: background-color 0.5s ease-in-out;
-}
-
-/* Button styling */
-#startBtn {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-}
-
-#startBtn:hover {
-    background-color: #45a049;
-}
-
-/* Lotto machine container */
-#lottoMachine {
+  }
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(friends.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: background-image 0.5s ease;
+  }
+  #background:hover {
+    background-image: url(running.jpg);
+  }
+  #next-button {
     display: none;
-    font-size: 3em;
-    color: #fff;
-    margin-top: 20px;
-    text-align: center;
-    letter-spacing: 0.1em;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-/* Animation for the lotto text */
-@keyframes spin {
-    0% { transform: rotateX(0deg); }
-    100% { transform: rotateX(-360deg); }
-}
-
-/* Smooth fade-in for the lotto machine */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    z-index: 10;
+  }
+  #next-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  @media (max-width: 768px) {
+    #next-button {
+      font-size: 16px;
+      padding: 10px 20px;
+      bottom: 10px;
+    }
+    #background {
+      background-size: contain;
+    }
+  }
 
