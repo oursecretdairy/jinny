@@ -14,14 +14,14 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(friends.jpg);
+    background-image: url(plumtree.webp);
     background-size: cover;
     background-position: center;
     z-index: -1;
     transition: background-image 0.5s ease;
   }
   #background:hover {
-    background-image: url(running.jpg);
+    background-image: url(falltree.jpg);
   }
   #next-button {
     display: none;
@@ -52,4 +52,40 @@ body, html {
       background-size: contain;
     }
   }
+  /* Media query for devices with a width of 768px or smaller */
+@media (max-width: 768px) {
+    #next-button {
+      bottom: 10px; /* Adjust position for smaller screens */
+      font-size: 16px; /* Reduce font size */
+      padding: 10px 20px; /* Adjust padding */
+      canvas {
+        touch-action: none; /* Prevent scrolling while erasing */
+      }
+    }
+  
+    canvas {
+      /* Ensure canvas adapts well to small screens */
+      width: 100%;
+      height: 100%;
+    }
+  
+    #background {
+      background-size: cover; /* Ensure full coverage */
+      background-position: center;
+    }
+  }
+  
+  /* Media query for devices with a width of 480px or smaller */
+  @media (max-width: 480px) {
+    #next-button {
+      font-size: 14px; /* Further reduce font size */
+      padding: 8px 16px; /* Adjust padding for very small screens */
+    }
+  
+    #background {
+      background-position: top; /* Focus on the top of the image */
+    }
+  }
+
+  
 

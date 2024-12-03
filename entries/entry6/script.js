@@ -20,6 +20,10 @@ video.addEventListener('ended', function () {
     endImage.style.display = 'block';
     endImage.style.opacity = '1';
 });
+function reloadPage() {
+    // Redirect to a new link (change the URL as needed)
+    window.location.href = "https://oursecretdairy.github.io/jinny/entries/entry%207/index7.html"; 
+}
 
 
 

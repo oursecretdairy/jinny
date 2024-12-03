@@ -10,6 +10,7 @@ body {
 h1 {
     font-size: 300%;
 }
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -20,7 +21,6 @@ h1 {
 .message {
     margin-bottom: 20px;
     font-size: large;
-    
 }
 
 .prompt {
@@ -51,6 +51,7 @@ a:hover {
     font-size: 14px;
     color: #567480;
 }
+
 .message-input {
     display: flex;
     justify-content: space-between;
@@ -77,3 +78,104 @@ a:hover {
 .message-input button:hover {
     background-color: #4577a0;
 }
+
+/* Media Queries */
+
+/* Tablets and Medium Screens */
+@media (max-width: 1024px) {
+    body {
+        font-size: 15px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 250%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .message {
+        font-size: medium;
+    }
+
+    .message-input input {
+        padding: 8px;
+    }
+
+    .message-input button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Smartphones and Small Screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 200%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .message {
+        font-size: small;
+    }
+
+    .message-input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .message-input input {
+        margin: 0 0 10px 0;
+        padding: 8px;
+    }
+
+    .message-input button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 150%;
+    }
+
+    .container {
+        padding: 8px;
+        border-width: 1px;
+    }
+
+    .message {
+        font-size: small;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+    .message-input input {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .message-input button {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+

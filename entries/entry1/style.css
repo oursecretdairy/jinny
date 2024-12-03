@@ -9,7 +9,6 @@ body {
     margin: 0;
 }
 
-
 .container {
     position: relative;
     width: 600px;
@@ -44,6 +43,7 @@ body {
     color: #333;
     padding-top: 100px;
 }
+
 .buttons {
     display: none;
     margin-top: 20px;
@@ -76,4 +76,69 @@ body {
 
 .buttons button:active {
     transform: translateY(0px); /* Return the button back to normal on click */
+}
+
+/* Media Queries */
+
+/* For tablets and medium screens */
+@media (max-width: 1024px) {
+    .container {
+        width: 500px;
+        height: 500px;
+    }
+
+    .image1, .image2 {
+        width: 400px;
+    }
+
+    .buttons button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* For smartphones and small screens */
+@media (max-width: 768px) {
+    .container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .image1, .image2 {
+        width: 300px;
+    }
+
+    .text {
+        font-size: 20px;
+        padding-top: 50px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+        padding: 8px 18px;
+        margin: 8px;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .image1, .image2 {
+        width: 250px;
+    }
+
+    .text {
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    .buttons button {
+        font-size: 12px;
+        padding: 6px 15px;
+        margin: 5px;
+    }
 }
