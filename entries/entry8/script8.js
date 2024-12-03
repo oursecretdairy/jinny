@@ -86,32 +86,4 @@ window.addEventListener('resize', () => {
   canvas.height = window.innerHeight;
   ctx.putImageData(imageData, 0, 0);
 });
-// Adjust brush size based on screen width
-function getBrushSize() {
-    if (window.innerWidth <= 480) {
-      return 30; // Smaller brush size for very small screens
-    } else if (window.innerWidth <= 768) {
-      return 40; // Medium brush size for tablets
-    }
-    return 50; // Default brush size for larger screens
-  }
-  
-  // Update draw function to use responsive brush size
-  function draw(e) {
-    if (!isDrawing) return;
-  
-    // Set brush properties
-    ctx.globalCompositeOperation = 'destination-out'; // Erases the black
-    ctx.lineWidth = getBrushSize();
-    ctx.lineCap = 'round';
-  
-    // Draw on the canvas
-    ctx.lineTo(e.clientX, e.clientY);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.clientX, e.clientY);
-  
-    // Track erased area
-    updateErasedArea();
-  }
-  
+
