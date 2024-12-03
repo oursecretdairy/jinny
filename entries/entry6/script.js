@@ -2,11 +2,10 @@
 const video = document.getElementById('background-video');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const endImage = document.getElementById('endImage');
-const redirectLink = document.getElementById('redirectLink');
 
 // Function to toggle play and pause
 playPauseBtn.addEventListener('click', function () {
-    if (video.paused) {
+    if (video.paused || video.ended) {
         video.play();
         playPauseBtn.textContent = 'Pause';
     } else {
@@ -19,11 +18,11 @@ playPauseBtn.addEventListener('click', function () {
 video.addEventListener('ended', function () {
     endImage.style.display = 'block';
     endImage.style.opacity = '1';
+    playPauseBtn.textContent = 'Play'; // Reset button text
 });
-function reloadPage() {
-    // Redirect to a new link (change the URL as needed)
-    window.location.href = "https://oursecretdairy.github.io/jinny/entries/entry%207/index7.html"; 
-}
+
+
+
 
 
 
